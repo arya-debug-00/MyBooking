@@ -29,4 +29,6 @@ def test_login(page, test_input):
     login_page = LoginPage(page)
     login_page.navigate()
     login_page.login(test_input["username"], test_input["password"])
-    
+    page.wait_for_timeout(40000)
+    page.get_by_role("button", name="Verify", exact=True).click()
+    page.wait_for_timeout(15000)
