@@ -14,13 +14,14 @@ class LoginPage:
         
         self.password_input = page.get_by_placeholder("Password")
         self.login_button = page.get_by_role("button", name="Login", exact=True)
+        # OTP Verify button
+        self.verify_button = page.get_by_role("button", name="Verify", exact=True)
         # Menu & logout
         #self.menu_icon = page.get_by_test_id("MenuOutlinedIcon")
         #self.personIcon = page.get_by_test_id("PersonIcon")
         #self.logout = page.get_by_text("Logout")
         # Consignment locators
-
-
+    
     def navigate(self):
         self.page.goto("https://internal.qa.bring.services/mybooking/user-login")
 
