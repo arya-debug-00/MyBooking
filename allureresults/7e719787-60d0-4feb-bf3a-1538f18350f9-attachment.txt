@@ -1,0 +1,9 @@
+Username entered
+Password entered
+Login button clicked
+EDI Filter found: 1
+EDI Filter clicked
+Records before edit: 3
+Note after Edit opens: Testing Automation
+Old note records: 3
+New note records: 2

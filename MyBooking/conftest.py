@@ -1,4 +1,5 @@
 import pytest
+import allure
 from playwright.sync_api import sync_playwright
 from pages.login_page import LoginPage
 from utils.data_loader import get_test_data
@@ -37,6 +38,20 @@ def logged_in_page():
 
         # Give application time to open
         page.wait_for_timeout(5000)
+
+        @pytest.hookimpl(hookwrapper=True)
+        def pytest_runtest_makereport(item, call):
+            outcome = yield
+            report = outcome.get_result()
+            if report.when == "call":
+                page = item.funcargs.get("logged_in_page")
+                if page:
+                    allure.attach(
+                        page.screenshot(full_page=True),
+                        name=f"{item.name}",
+                        attachment_type=allure.attachment_type.PNG
+                        )
+ 
 
         # Give the logged-in page to the test
         yield page

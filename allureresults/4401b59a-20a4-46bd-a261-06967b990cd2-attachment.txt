@@ -1,0 +1,14 @@
+Username entered
+Password entered
+Login button clicked
+EDI Filter found: 1
+EDI Filter clicked
+Customer selected: 
+Before Save - Note: Testing Automation
+Min pallets: 3
+Postal code: 74601
+Country: Sweden
+EDI Type: Incoming Check
+Note: Testing Automation
+Save buttons found: 1
+Saved record found: 3

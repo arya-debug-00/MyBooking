@@ -1,0 +1,3 @@
+Username entered
+Password entered
+Login button clicked

@@ -1,0 +1,12 @@
+Username entered
+Password entered
+Login button clicked
+Home clicked
+Email clicked
+Opening Create Email List popup
+Title: Test AR
+Emails: senna.kamatchi.prabhakar@posten.no
+Create button clicked
+Email List: senna.kamatchi.prabhakar@posten.no
+Content: Test AR message
+Send button clicked

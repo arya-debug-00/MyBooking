@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","58841","test_login[User=SETCSSENN1]","tests","2026-10-22","passed","2026-10-22","","test_login","",""
+"","83936","test_email_navigation","tests","2026-10-22","passed","2026-10-22","","test_Home","",""
+"","87075","test_edit_edi_filter","tests","2026-10-22","passed","2026-10-22","","test_app_management","",""
+"","92229","test_create_edi_filter","tests","2026-10-22","passed","2026-10-22","","test_app_management","",""

@@ -1,0 +1,4 @@
+Username entered
+Password entered
+Login button clicked
+LOGIN TEST FINISHED
