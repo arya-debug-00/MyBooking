@@ -2,7 +2,11 @@ from pages.home_page import HomePage
 from utils.data_loader import get_test_data
 
 
-data = get_test_data("data/login_data.xlsx")
+#data = get_test_data("data/login_data.xlsx")
+data = get_test_data(
+    "data/login_data.xlsx",
+    sheet_name="Login"
+)
 print(data[0])
 
 

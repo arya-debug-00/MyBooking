@@ -68,17 +68,23 @@ class OverviewTodayPage:
         )
     def create_register(self, customer_number):
 
-        self.overview_today_icon.click()
+        if "overview-today/register" not in self.page.url:
 
-        print("Overview Today clicked")
+            self.overview_today_icon.click()
 
-        self.page.wait_for_timeout(3000)
+            print("Overview Today clicked")
 
-        self.register_button.click()
+            self.page.wait_for_timeout(3000)
 
-        print("Register clicked")
+            self.register_button.click()
 
-        self.page.wait_for_timeout(3000)
+            print("Register clicked")
+
+            self.page.wait_for_timeout(3000)
+
+        else:
+
+            print("Already on Register page")
 
         self.customer_box.click()
 
@@ -130,26 +136,29 @@ class OverviewTodayPage:
     def select_order_type(self, order_type):
 
         checkboxes = self.page.locator(
-            'input[type="checkbox"]'
+            'input.PrivateSwitchBase-input'
         )
+
+        print("Checkbox count:", checkboxes.count())
 
         if order_type.upper() == "STK":
 
-            checkboxes.nth(0).check()
+            checkboxes.nth(2).check()
 
             print(
                 "STK checked:",
-                checkboxes.nth(0).is_checked()
+                checkboxes.nth(2).is_checked()
             )
 
         elif order_type.upper() == "FDX":
 
-            checkboxes.nth(1).check()
+            checkboxes.nth(3).check()
 
             print(
                 "FDX checked:",
-                checkboxes.nth(1).is_checked()
+                checkboxes.nth(3).is_checked()
             )
+
     def create_order(self):
 
         self.create_order_button.click()

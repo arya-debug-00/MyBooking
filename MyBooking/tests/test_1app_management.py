@@ -3,10 +3,17 @@ from pages.app_management_page import ApplicationManagementPage
 from utils.data_loader import get_test_data
 
 # Load Excel data
-data = get_test_data("data/login_data.xlsx")
+#data = get_test_data("data/login_data.xlsx")
+login_data = get_test_data(
+    "data/login_data.xlsx",
+    sheet_name="Login"
+)
 
-create_input = data[0]
-edit_input = data[1]
+create_input = login_data[0]
+
+edit_input = login_data[1]
+print("Create Data:", create_input)
+print("Edit Data:", edit_input)
 
 
 
