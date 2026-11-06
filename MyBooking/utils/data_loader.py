@@ -44,6 +44,7 @@ def get_test_data(relative_path, sheet_name=None):
         raise FileNotFoundError(f"Excel file not found: {full_path}")
 
     workbook = openpyxl.load_workbook(full_path)
+    print("Available Sheets:", workbook.sheetnames)
 
     if sheet_name:
         sheet = workbook[sheet_name]
